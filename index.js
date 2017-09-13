@@ -1,10 +1,11 @@
 const express = require('express');
 const axios = require('axios');
-const credentials = require('./login.js')
+const keys = require('./login.js')
 
 const app = express();
 const port = 3000;
-const baseurl = 'https://rco-auth-api-develop.qa.redcross.us/rest/';
+const baseurl = keys.baseURL;
+const credentials = keys.credentials;
 
 let apiStatus = {
     login: null,
